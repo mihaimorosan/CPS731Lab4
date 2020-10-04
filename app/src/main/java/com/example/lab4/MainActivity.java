@@ -10,7 +10,6 @@ import java.util.LinkedList;
 
 
 public class MainActivity extends AppCompatActivity {
-    private final LinkedList<String> carList = new LinkedList<>();
     private RecyclerView rv;
     private CarListAdapter ca;
 
@@ -18,10 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        for (int i = 0; i < 10; i++)
-            carList.addLast("Car " + (i + 1));
-
+        setTitle("Cars For Car Enthusiasts");
         rv = findViewById(R.id.rv);
         ca = new CarListAdapter(this);
         rv.setAdapter(ca);
