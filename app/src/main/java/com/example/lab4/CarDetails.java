@@ -269,6 +269,7 @@ public class CarDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car_details);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         car_pic = (ImageView) findViewById(R.id.car);
         car = getIntent().getStringExtra("car");
         position = Integer.parseInt(getIntent().getStringExtra("position"));
